@@ -79,6 +79,6 @@ public class ChatClient implements Runnable{
 //		else
 //			client = new ChatClient(args[0], Integer.parseInt(args[1]));
 		client = new ChatClient("161.200.212.192", Integer.parseInt("5555"));
-		
+//		++++
 	}
 }
