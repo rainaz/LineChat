@@ -2,6 +2,8 @@ package Message;
 
 import java.security.Timestamp;
 
+
+
 public class Message {
 	 String type;
 	 String text;
