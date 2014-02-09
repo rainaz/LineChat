@@ -11,7 +11,7 @@ public class ChatClient implements Runnable{
 	private DataInputStream console = null;
 	private DataOutputStream streamOut = null;
 	private ChatClientThread client = null;
-	private Boolean login = false;
+	private User user = null;
 
 	public ChatClient(String serverName, int serverPort) {
 		System.out.println("Establishing connection. Please wait ...");
@@ -42,16 +42,19 @@ public class ChatClient implements Runnable{
 		if (msg.equals(".bye")) {
 			System.out.println("Good bye. Press RETURN to exit ...");
 			stop();
-		} if (msg.equals(".unreadMsg")) {
-			//
-		} if (msg.equals(".endunreadMsg")) {
-			//
-		} if (msg.equals(".loginSuccess")) {
-			System.out.println("login success.");
-		} if (msg.equals(".unreadMsg")) {
-			//
-		} 
-		else
+		} if (msg.equals(".login")) {
+			System.out.println("Login Success.");
+		} if (msg.equals(".listGroup")) {
+			System.out.print("Your group list : ");
+		} if (msg.equals(".enterGroup")) {
+			System.out.print("Enter group : ");
+		} if (msg.equals(".exitGroup")) {
+			System.out.print("Exit group : ");
+		} if (msg.equals(".createGroup")) {
+			System.out.print("Create group success.");
+		} if (msg.equals(".leaveGroup")) {
+			System.out.print("Leave group : ");
+		} else
 			System.out.println(msg);
 	}
 
