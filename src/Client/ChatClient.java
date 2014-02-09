@@ -3,12 +3,15 @@ package Client;
 import java.net.*;
 import java.io.*;
 
+import Message.Message;
+
 public class ChatClient implements Runnable{
 	private Socket socket = null;
 	private Thread thread = null;
 	private DataInputStream console = null;
 	private DataOutputStream streamOut = null;
 	private ChatClientThread client = null;
+	private Boolean login = false;
 
 	public ChatClient(String serverName, int serverPort) {
 		System.out.println("Establishing connection. Please wait ...");
@@ -39,7 +42,16 @@ public class ChatClient implements Runnable{
 		if (msg.equals(".bye")) {
 			System.out.println("Good bye. Press RETURN to exit ...");
 			stop();
-		} else
+		} if (msg.equals(".unreadMsg")) {
+			//
+		} if (msg.equals(".endunreadMsg")) {
+			//
+		} if (msg.equals(".loginSuccess")) {
+			System.out.println("login success.");
+		} if (msg.equals(".unreadMsg")) {
+			//
+		} 
+		else
 			System.out.println(msg);
 	}
 
