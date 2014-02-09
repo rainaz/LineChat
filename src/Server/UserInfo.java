@@ -8,7 +8,7 @@ public class UserInfo implements Comparable<String> {
 	private String userID;
 	private int lastMsgNo;
 	private boolean online;
-
+	
 	public UserInfo(String uID) {
 		userID = uID.toLowerCase();
 		online = false;
